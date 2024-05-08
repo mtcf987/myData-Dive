@@ -1,0 +1,33 @@
+Malena Tomlin
+Data Query 1
+Python Using Pandas
+
+import pandas as pd
+
+# Load dataset
+url = "https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv"
+df = pd.read_csv(url)
+
+# Display the first few rows of the dataset
+print("First few rows of the dataset:")
+print(df.head())
+
+# Basic statistics of the dataset
+print("\nBasic statistics of the dataset:")
+print(df.describe())
+
+# Check for missing values
+print("\nMissing values in the dataset:")
+print(df.isnull().sum())
+
+# Drop rows with missing values
+df_cleaned = df.dropna()
+
+# Filter dataset based on conditions
+male_passengers = df[df['Sex'] == 'male']
+print("\nNumber of male passengers:", len(male_passengers))
+
+# Group data by a categorical variable and calculate statistics
+survival_by_class = df.groupby('Pclass')['Survived'].mean()
+print("\nSurvival rate by passenger class:")
+print(survival_by_class)
