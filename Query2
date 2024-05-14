@@ -1,7 +1,31 @@
-import pandas as pd
+Malena Tomlin
+Common Pandas Queries
 
-# Load data from CSV file
-df = pd.read_csv('data.csv')
+# Select rows where a specific column meets a condition
+result = df[df['Column1'] > 10]
+print(result)
 
-# Display the first 5 rows of the DataFrame
-print(df.head())
+# Select rows based on multiple conditions
+result = df[(df['Column1'] > 10) & (df['Column2'] == 'value')]
+print(result)
+
+# Select rows where a column contains a specific string
+result = df[df['Column'].str.contains('substring')]
+print(result)
+
+# Select rows where a specific column has an exact value
+result = df[df['Column'] == 'value']
+print(result)
+
+# Select rows where a column contains a partial string match
+result = df[df['Column'].str.contains('substring', na=False)]
+print(result)
+
+# Select rows based on multiple conditions with OR
+result = df[(df['Column1'] > 10) | (df['Column2'] == 'value')]
+print(result)
+
+# Select rows where a column value is in a list
+values_list = ['value1', 'value2', 'value3']
+result = df[df['Column'].isin(values_list)]
+print(result)
