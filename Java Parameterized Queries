@@ -1,0 +1,9 @@
+// Assuming you have input parameters
+String parameter1 = "value1";
+String parameter2 = "value2";
+
+String sqlQuery = "SELECT * FROM table_name WHERE column1 = ? AND column2 = ?";
+PreparedStatement pstmt = conn.prepareStatement(sqlQuery);
+pstmt.setString(1, parameter1);
+pstmt.setString(2, parameter2);
+ResultSet rs = pstmt.executeQuery();
