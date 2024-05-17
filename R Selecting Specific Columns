@@ -1,0 +1,3 @@
+# Select specific columns from the dataset
+selected_columns <- data %>%
+                      select(column1, column2, ...)
