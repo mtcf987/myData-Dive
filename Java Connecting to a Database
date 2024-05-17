@@ -1,0 +1,27 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+# Name: Malena Tomlin
+# Subject: Connecting to a Database
+# Language: Java
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class DatabaseConnection {
+    public static void main(String[] args) {
+        // Database connection parameters
+        String url = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "username";
+        String password = "password";
+
+        // Establish database connection
+        try (Connection conn = DriverManager.getConnection(url, username, password)) {
+            System.out.println("Connected to the database!");
+        } catch (SQLException e) {
+            System.out.println("Connection failed: " + e.getMessage());
+        }
+    }
+}
