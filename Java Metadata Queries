@@ -1,0 +1,5 @@
+DatabaseMetaData meta = conn.getMetaData();
+ResultSet tables = meta.getTables(null, null, "%", null);
+while (tables.next()) {
+    System.out.println(tables.getString("TABLE_NAME"));
+}
