@@ -1,0 +1,5 @@
+String sqlUpdate = "UPDATE table_name SET column1 = ? WHERE column2 = ?";
+PreparedStatement pstmt = conn.prepareStatement(sqlUpdate);
+pstmt.setString(1, newValue);
+pstmt.setString(2, conditionValue);
+int rowsUpdated = pstmt.executeUpdate();
