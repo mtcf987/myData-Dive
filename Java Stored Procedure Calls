@@ -1,0 +1,5 @@
+String sqlCall = "{CALL stored_procedure_name(?, ?)}";
+CallableStatement cstmt = conn.prepareCall(sqlCall);
+cstmt.setString(1, parameter1);
+cstmt.setString(2, parameter2);
+ResultSet rs = cstmt.executeQuery();
