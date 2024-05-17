@@ -1,0 +1,5 @@
+-- Join orders and customers tables to get customer information with order details
+SELECT o.order_id, c.customer_name, o.order_date, od.product_id, od.quantity
+FROM orders o
+JOIN customers c ON o.customer_id = c.customer_id
+JOIN order_details od ON o.order_id = od.order_id;
