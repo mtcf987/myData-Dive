@@ -1,0 +1,7 @@
+-- Calculate total sales amount
+SELECT SUM(sales_amount) AS total_sales
+FROM sales_data;
+
+-- Calculate average order value
+SELECT AVG(order_amount) AS avg_order_value
+FROM orders;
