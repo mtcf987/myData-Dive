@@ -1,0 +1,9 @@
+try {
+    conn.setAutoCommit(false); // Start transaction
+
+    // Execute SQL statements within transaction
+
+    conn.commit(); // Commit transaction
+} catch (SQLException e) {
+    conn.rollback(); // Rollback transaction if error occurs
+}
