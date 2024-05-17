@@ -1,0 +1,14 @@
+-- Find customers who placed more than 3 orders
+SELECT customer_id, customer_name
+FROM customers
+WHERE customer_id IN (
+    SELECT customer_id
+    FROM orders
+    GROUP BY customer_id
+    HAVING COUNT(order_id) > 3
+);
+
+-- Calculate total revenue from orders placed in 2022
+SELECT SUM(order_amount) AS total_revenue_2022
+FROM orders
+WHERE order_date BETWEEN '2022-01-01' AND '2022-12-31';
