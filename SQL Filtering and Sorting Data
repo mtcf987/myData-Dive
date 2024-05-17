@@ -1,0 +1,10 @@
+-- Filter orders by date range
+SELECT *
+FROM orders
+WHERE order_date BETWEEN '2022-01-01' AND '2022-12-31';
+
+-- Sort products by sales quantity in descending order
+SELECT product_id, product_name, SUM(quantity) AS total_quantity
+FROM order_details
+GROUP BY product_id, product_name
+ORDER BY total_quantity DESC;
