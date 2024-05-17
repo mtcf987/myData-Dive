@@ -1,0 +1,2 @@
+# Assume 'table1' and 'table2' are your datasets
+joined_data <- inner_join(table1, table2, by = "common_column")
