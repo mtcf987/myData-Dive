@@ -1,0 +1,4 @@
+String sqlDelete = "DELETE FROM table_name WHERE column1 = ?";
+PreparedStatement pstmt = conn.prepareStatement(sqlDelete);
+pstmt.setString(1, valueToDelete);
+int rowsDeleted = pstmt.executeUpdate();
