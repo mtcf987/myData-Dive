@@ -1,0 +1,5 @@
+String sqlInsert = "INSERT INTO table_name (column1, column2) VALUES (?, ?)";
+PreparedStatement pstmt = conn.prepareStatement(sqlInsert);
+pstmt.setString(1, value1);
+pstmt.setString(2, value2);
+int rowsInserted = pstmt.executeUpdate();
