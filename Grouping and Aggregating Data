@@ -1,0 +1,10 @@
+# Group by a column and calculate aggregate statistics
+grouped_data <- data %>%
+                  group_by(grouping_column) %>%
+                  summarise(mean_value = mean(numeric_column),
+                            total_count = n())
+
+# Example: Calculate average sales by product category
+avg_sales_by_category <- sales_data %>%
+                            group_by(product_category) %>%
+                            summarise(avg_sales = mean(sales_amount))
