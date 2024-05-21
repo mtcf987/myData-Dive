@@ -1,0 +1,11 @@
+# Name: Malena Tomlin
+# Language: MATLAB
+
+% Remove missing values
+data_cleaned = rmmissing(data);
+
+% Normalize data
+data_normalized = normalize(data);
+
+% Perform feature scaling
+data_scaled = rescale(data);
