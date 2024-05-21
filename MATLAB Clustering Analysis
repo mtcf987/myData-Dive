@@ -1,0 +1,10 @@
+# Name: Malena Tomlin
+# Language: MATLAB
+
+% Perform k-means clustering
+[idx, centroids] = kmeans(data, k);
+
+% Visualize clustering results
+gscatter(data(:,1), data(:,2), idx)
+hold on
+plot(centroids(:,1), centroids(:,2), 'kx', 'MarkerSize', 15, 'LineWidth', 3)
