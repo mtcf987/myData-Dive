@@ -1,0 +1,13 @@
+# Name: Malena Tomlin
+# Language: MATLAB
+
+% Load machine learning toolbox
+% Example: Classification using SVM
+SVMModel = fitcsvm(data, 'ResponseVariable');
+
+% Predict class labels for new data
+predictions = predict(SVMModel, new_data);
+
+% Evaluate model performance
+confusion_matrix = confusionmat(true_labels, predicted_labels);
+accuracy = sum(diag(confusion_matrix)) / sum(confusion_matrix(:));
