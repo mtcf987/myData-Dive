@@ -1,0 +1,10 @@
+# Name: Malena Tomlin
+# Language: MATLAB
+
+% Convert data to time series object
+ts_data = timeseries(data.Values, data.Time);
+
+% Perform time series analysis (e.g., forecasting)
+model = arima('Constant',0,'AR',0.5);
+fit = estimate(model, ts_data);
+forecast_data = forecast(fit, 'NumPeriods', 10);
