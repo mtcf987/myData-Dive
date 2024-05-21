@@ -1,0 +1,12 @@
+# Name: Malena Tomlin
+# Language: MATLAB
+
+
+% Load data from a CSV file
+data = readtable('data.csv');
+
+% Display the first few rows of the data
+head(data)
+
+% Display summary statistics
+summary(data)
