@@ -1,0 +1,15 @@
+# Name: Malena Tomlin
+# Language: MATLAB
+
+% Calculate mean, median, and standard deviation
+mean_value = mean(data.Variable);
+median_value = median(data.Variable);
+std_deviation = std(data.Variable);
+
+% Perform hypothesis testing (e.g., t-test)
+[h, p] = ttest2(data.Group1, data.Group2);
+if h
+    disp('Reject null hypothesis')
+else
+    disp('Fail to reject null hypothesis')
+end
