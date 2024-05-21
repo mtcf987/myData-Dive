@@ -1,0 +1,11 @@
+# Name: Malena Tomlin
+# Language: MATLAB
+
+% Plot histogram of a numerical variable
+histogram(data.Variable)
+
+% Create a scatter plot
+scatter(data.Variable1, data.Variable2)
+
+% Plot a line chart
+plot(data.Time, data.Value)
